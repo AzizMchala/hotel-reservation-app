@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1080dp"
+    android:height="1920dp"
+    android:viewportWidth="1080"
+    android:viewportHeight="1920">
+
+    <!-- Couleur de fond principale -->
+    <path
+        android:fillColor="#E6F2FF"
+        android:pathData="M0,0h1080v1920H0z" />
+
+    <!-- Première vague supérieure -->
+    <path
+        android:fillColor="#2296F3"
+        android:pathData="M0,0h1080v300c-200,-100 -300,50 -600,50s-400,-150 -480,-200z" />
+
+    <!-- Vague inférieure -->
+    <path
+        android:fillColor="#2296F3"
+        android:pathData="M0,1800c200,-100 300,50 600,50s400,-150 480,-200v300H0z" />
+</vector>

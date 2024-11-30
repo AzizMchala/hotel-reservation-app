@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/top_wave_background">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#2296F3"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/backTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:text="BACK"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:onClick="onBackClicked" />
+
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/home"
+            android:contentDescription="Home Icon"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Formulaire -->
+    <LinearLayout
+        android:id="@+id/confirmReservationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/topNavBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Titre avant le formulaire -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Your Stay"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/nomHotel"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nom Hotel"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+
+            android:layout_marginBottom="20dp"
+            android:gravity="center"/>
+
+
+
+
+
+
+        <EditText
+            android:id="@+id/arrivalDateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date d'arrivée"
+            android:focusable="false"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:onClick="showArrivalDatePicker"
+            android:background="@drawable/input_background" />
+
+        <EditText
+            android:id="@+id/departureDateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date de départ"
+            android:focusable="false"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:onClick="showDepartureDatePicker"
+            android:background="@drawable/input_background" />
+
+        <!-- Bouton réserver -->
+
+    </LinearLayout>
+
+    <!-- Section pour afficher le prix total -->
+    <LinearLayout
+        android:id="@+id/priceSection"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/confirmReservationButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginTop="20dp"
+   >
+
+        <!-- Texte pour le montant total -->
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/totalPriceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Price:"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <!-- Affichage du prix total -->
+        <TextView
+            android:id="@+id/totalPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp" />
+        <Button
+            android:id="@+id/confirme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Réserver"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2296F3"
+            android:layout_marginTop="16dp"
+            android:padding="12dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
